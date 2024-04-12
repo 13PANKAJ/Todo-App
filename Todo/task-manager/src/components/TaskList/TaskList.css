@@ -1,0 +1,21 @@
+.task-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between task cards */
+  }
+  
+  .task-item {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width of each task card */
+    max-width: calc(33.33% - 20px); /* Adjust the max-width of each task card */
+    background-color: #fff; /* Background color of task card */
+    border: 1px solid #ccc; /* Border color of task card */
+    border-radius: 8px; /* Border radius of task card */
+    padding: 20px; /* Padding of task card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow of task card */
+  }
+  
+  .task-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover effect */
+  }
+ 
+  
