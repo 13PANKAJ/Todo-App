@@ -7,8 +7,9 @@ const TaskForm = ({ addTask }) => {
   const [status, setStatus] = useState('To Do');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission behavior
     const newTask = { title, description, status };
+    console.log("checking button clicked enw task",newTask)
     addTask(newTask);
     setTitle('');
     setDescription('');
@@ -21,7 +22,7 @@ const TaskForm = ({ addTask }) => {
       <form className="task-form" onSubmit={handleSubmit}>
         <div className="task-form-label">Title:</div>
         <input
-          className="task-form-input"
+          className="task-form-textarea"
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -29,7 +30,7 @@ const TaskForm = ({ addTask }) => {
         />
         <div className="task-form-label">Description:</div>
         <textarea
-          className="task-form-input"
+          className="task-form-textarea"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
@@ -43,10 +44,11 @@ const TaskForm = ({ addTask }) => {
           <option value="In Progress">In Progress</option>
           <option value="Done">Done</option>
         </select>
-        <button className="task-form-button" type="submit">Create Task</button>
+        <button className="task-form-button" type="submit">Create Task</button> {/* Set type to "submit" */}
       </form>
     </div>
   );
 };
 
 export default TaskForm;
+

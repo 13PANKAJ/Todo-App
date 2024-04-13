@@ -1,5 +1,5 @@
 import React from 'react';
-import './TaskItem.css'; // Import CSS file
+import './TaskItem.css'; ; // Import CSS file
 
 const TaskItem = ({ task, updateTaskStatus, deleteTask }) => {
   return (
