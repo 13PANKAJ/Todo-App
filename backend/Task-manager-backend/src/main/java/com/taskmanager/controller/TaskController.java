@@ -1,6 +1,7 @@
 package com.taskmanager.controller;
 
 import com.taskmanager.entity.Task;
+import com.taskmanager.exception.ResourceNotFoundException;
 import com.taskmanager.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,7 @@ public class TaskController {
     @GetMapping("/{id}")
     public Task getTaskById(@PathVariable Long id) {
         return taskRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid task id: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("task id not found or deleted: " + id));
     }
 
     @PutMapping("/{id}")
@@ -39,7 +40,7 @@ public class TaskController {
                     task.setStatus(updatedTask.getStatus());
                     return taskRepository.save(task);
                 })
-                .orElseThrow(() -> new IllegalArgumentException("Invalid task id: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Invalid task id: " + id));
     }
 
     @DeleteMapping("/{id}")
