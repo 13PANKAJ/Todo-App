@@ -41,4 +41,14 @@ public class Task {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public Object getId() {
+        return id;
+    }
+
+    public void setId(Long taskId) {
+    }
+
+    public void setName(String mock_task) {
+    }
 }

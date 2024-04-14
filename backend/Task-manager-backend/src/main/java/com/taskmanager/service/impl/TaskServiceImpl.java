@@ -22,7 +22,11 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Task createTask(Task task) {
-        return taskRepository.save(task);
+        Task savedTask = taskRepository.save(task);
+        if (savedTask == null) {
+            throw new RuntimeException("Failed to create task"); // Or use a more specific exception type
+        }
+        return savedTask;
     }
 
     @Override
