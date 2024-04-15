@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TaskForm from './components/TaskForm/TaskForm';
 import TaskList from './components/TaskList/TaskList';
 import FilterDropdown from './components/FilterDropdown/FilterDropdown';
-
+import LoginComponent from './components/Login/LoginComponent';
 function App() {
   
   const [tasks, setTasks] = useState([]);
@@ -74,7 +74,9 @@ function App() {
      <header className="bg-info text-white py-3">
         <div className="container">
           <h1 className="col-md-10 mt-2 pt-1">Task Manager</h1>
+          <LoginComponent/>
         </div>
+       
       </header>
       <div className="container-fluid flex-grow-1">
         < div className="row">
@@ -82,7 +84,7 @@ function App() {
           <aside className="col-md-3 bg-info text-white py-3" style={{ width: '2px' }}>
             {/* Sidebar content goes here */}
           </aside>
-          <main className="col-md-9 py-3">
+          <main className="col-md-9 py-3">;
       <TaskForm addTask={addTask} />
       
       <FilterDropdown statuses={['All', 'To Do', 'In Progress', 'Done']} onSelectStatus={handleSelectStatus} />
