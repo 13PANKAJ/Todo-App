@@ -1,5 +1,6 @@
 import React from 'react';
-import TaskItem from '../Task-Item/TaskItem'; // Assuming you have a TaskItem component to render individual tasks
+import TaskItem from '../TaskItem/TaskItem';
+// Assuming you have a TaskItem component to render individual tasks
 
 const TaskList = ({ tasks, updateTaskStatus, deleteTask }) => {
   const handleStatusChange = (taskId, newStatus) => {

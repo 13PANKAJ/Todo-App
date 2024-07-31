@@ -1,0 +1,11 @@
+.Login {
+    /* Your styles for the LoginComponent */
+    /* For example: */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  label, input, button{
+    margin:10px;
+    padding:5px;
+  }
