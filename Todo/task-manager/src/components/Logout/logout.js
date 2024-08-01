@@ -1,8 +1,8 @@
-function LogoutComponent(){
+// function LogoutComponent(){
 
-    return (
-        <div className="Login">
-            LogoutComponent
-        </div>
-    )
-}
+//     return (
+//         <div className="Login">
+//             LogoutComponent
+//         </div>
+//     )
+// }
